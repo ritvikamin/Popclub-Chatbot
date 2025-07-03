@@ -1,6 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { Accordion, AccordionItem } from "@/components/ui/accordion";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const faqs = [
   { q: 'What is POPCLUB?', a: 'POPCLUB is a modern rewards and payments platform.' },
@@ -18,8 +18,8 @@ export default function FAQPage() {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={faq.q} className="mb-2">
-              <AccordionItem.Trigger className="font-semibold text-popBlue">{faq.q}</AccordionItem.Trigger>
-              <AccordionItem.Content className="text-gray-700">{faq.a}</AccordionItem.Content>
+              <AccordionTrigger className="font-semibold text-popBlue">{faq.q}</AccordionTrigger>
+              <AccordionContent className="text-gray-700">{faq.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
